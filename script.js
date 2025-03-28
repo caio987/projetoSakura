@@ -303,7 +303,7 @@ function favorito() {
 function confirmar() {
   Swal.fire({
     title: "Compra Confirmada",
-    text: `A compra de R$${valor.toFixed(2)} foi concluida`,
+    text: `A compra de R$ ${valor.toFixed(2)} foi concluida`,
     icon: "success"
   });
 
@@ -312,7 +312,7 @@ function confirmar() {
 function sair() {
   Swal.fire({
     title: "Compra cancelada",
-    text: `Sua compra de R$${valor.toFixed(2)} foi cancelada`,
+    text: `Sua compra de R$ ${valor.toFixed(2)} foi cancelada`,
     icon: "error"
   });
 
