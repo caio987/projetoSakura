@@ -64,8 +64,8 @@ function enviaDados() {
     sessionStorage.setItem("contador", contador)
     window.location.href = "login.html"
   } else {
-    alerta = document.getElementById("alerta").innerHTML =
-      "As senhas estão diferentes!";
+   // alerta = document.getElementById("alerta").innerHTML = "As senhas estão diferentes!";
+    alert("As senhas estão diferentes!");
   }
 }
 
@@ -84,8 +84,8 @@ function confirmaDados() {
     sessionStorage.setItem("contador", contador)
     window.location.href = "index.html";
   } else {
-    alerta = document.getElementById("alerta").innerHTML =
-      "Senha ou nome incorreta!";
+   // alerta = document.getElementById("alerta").innerHTML = "Senha ou nome incorreta!";
+    alert("Senha ou nome incorretos!");
   }
 }
 
