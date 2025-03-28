@@ -1,0 +1,619 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(253, 201, 237);
+    overflow-x: hidden;
+}
+
+main {
+    background-image: url(img/teste.gif);
+    background-repeat: no-repeat;
+    background-size: 20vw;
+}
+
+.navbar {
+    width: 100%;
+    /* height: 25vh; */
+    /* position: relative; */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar_up {
+    background-color: rgb(231, 83, 212);
+    padding: 10px 0;
+    /* width: 100%; */
+    justify-content: space-evenly;
+    /* height: 20%; */
+    display: flex;
+}
+
+.link_social {
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    background-color: rgb(247, 247, 247);
+    text-align: center;
+    align-content: center;
+}
+
+.link_social img {
+    max-width: 30px;
+    padding: 5px;
+}
+
+.navbar_low {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(206, 142, 197);
+    /* width: 100%; */
+    padding: 20px 0;
+    height: 60%;
+    border-bottom: solid 5px rgb(255, 0, 255);
+    border-radius: 0 0 20px 20px;
+}
+
+#logo {
+    margin-left: 5%;
+    width: 100px;
+}
+
+#logo img {
+    width: 100%;
+}
+
+#searchBar {
+    position: absolute;
+    left: 25vw;
+    width: 25%;
+    height: 35px;
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#searchBar:focus {
+    border-color: #0971c7;
+    box-shadow: 0 0 5px rgba(9, 113, 199, 0.5);
+}
+
+.mobile_menu {
+    cursor: pointer;
+    display: none;
+    margin-right: 60px;
+    z-index: 2;
+}
+
+.mobile_menu div {
+    width: 32px;
+    height: 2px;
+    background: white;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+.navbar_usuario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 45%;
+}
+
+
+.petalas {
+    position: absolute;
+    left: 0;
+    top: 25vh;
+    width: 100%;
+    pointer-events: none;
+}
+
+.petalas img {
+    width: 100%;
+}
+
+.icon_navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon_navbar img {
+    width: 50px;
+}
+
+#usuario {
+    /* border: solid; */
+    text-align: center;
+    margin-bottom: -20px;
+}
+
+/* .navbar_explorar {
+    background-color: rgb(69, 130, 0);
+    width: 100%;
+} */
+
+
+.mobile_menu.active .linha1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile_menu.active .linha2 {
+    opacity: 0;
+}
+
+.mobile_menu.active .linha3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.container {
+    /* border: solid; */
+    width: 90vw;
+    padding-top: 15vh;
+    margin: 0 auto;
+}
+
+
+.cadastro {
+    margin: auto;
+    background-color: rgba(255, 127, 227, 0.363);
+    border-radius: 15px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+.cadastro a {
+    text-decoration: none;
+}
+
+.cadastro input {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.562);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    color: black;
+    font-size: 17px;
+    padding: 15px;
+}
+
+.cadastro img {
+    max-width: 150px;
+}
+
+.cadastro label {
+    font-size: 20px;
+
+}
+
+button {
+    width: 200px;
+    margin-top: 30px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    background-color: #f170d5;
+    border: none;
+    transition: .5s;
+    cursor: pointer;
+}
+
+button:hover {
+    padding: 30px;
+    width: 250px;
+    background-color: #80306e;
+    font-size: 20px;
+}
+
+::placeholder {
+    font-size: 17px;
+    color: rgb(126, 124, 124);
+}
+
+#results {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+    border-left: solid;
+    border-right: solid;
+    position: absolute;
+    top: 25vh;
+    /* Garantir que os resultados apareçam abaixo da barra de navegação */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    z-index: 1000;
+    /* Garantir que os resultados fiquem acima de outros elementos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 60vh;
+    /* Limitar a altura máxima dos resultados */
+    overflow-y: auto;
+    /* Permitir rolagem caso haja muitos resultados */
+}
+
+.item {
+    width: auto;
+    background: #f170d5;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item h3 {
+    text-align: left;
+    margin: 0 0 10px 0;
+    /* Espaço abaixo do título */
+}
+
+.item-content {
+    display: flex;
+    align-items: center;
+}
+
+.item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-right: 15px;
+    /* Espaço entre a imagem e o texto */
+}
+
+.item p {
+    text-align: left;
+    flex: 1;
+    /* Permite que o parágrafo ocupe o restante do espaço disponível */
+}
+
+/* Pagina de compra */
+#produto {
+    border: solid;
+    width: 60%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(116, 29, 101);
+    background-color: #ff81e242;
+
+}
+
+#nomeProduto {
+    font-size: 40px;
+}
+
+#descrisaoProduto,
+#precoProduto,
+#precoProdutoReal {
+    margin: 20px;
+    font-size: 20px;
+}
+
+#fotoProduto {
+    max-width: 350px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+/* Página de explore */
+#explore {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.caixa {
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    max-width: 300px;
+    padding: 15px;
+    background-color: rgb(240, 167, 212);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.caixa:hover {
+    transform: scale(1.1);
+}
+
+.caixa img {
+    border-radius: 15px;
+    height: 200px;
+    max-width: 300px;
+}
+
+
+/* Banner */
+
+
+.banner {
+    margin: 0 auto;
+    position: relative;
+    width: 60vw;
+    background-color: #fab8e9;
+    height: 40vh;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    /* Colocando um z-index baixo para o banner */
+}
+
+
+.slides {
+    width: 90%;
+    padding-top: 35px;
+    margin: 0 auto;
+}
+
+.slide {
+    border-radius: 10px;
+    width: 90%;
+    height: 80%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    opacity: 0;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.manual-btn {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.manual-btn.active {
+    background-color: #fff;
+    transform: scale(1.3);
+}
+
+
+#aparecer {
+    background-color: rgba(238, 166, 222, 0.596);
+    color: #fff;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 45vh;
+    left: 35%;
+}
+
+.confirmarCompra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.confirmarCompra p {
+    margin: 20px;
+}
+
+.confirmarCompra button {
+    background-color: #80306e;
+}
+
+.confirmarCompra button:hover {
+    width: 220px;
+    padding: 20px;
+    font-size: 16px;
+    background-color: #f170d5;
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #logo img {
+        width: 80px;
+    }
+
+    #logo {
+        margin: 0 2px;
+    }
+
+    #searchBar {
+        height: 20px;
+        width: 150px;
+        padding: 5px;
+        /* left: 30%; */
+    }
+
+    ::placeholder {
+        font-size: 1em;
+    }
+
+    .navbar .navbar_usuario {
+        position: absolute;
+        top: 24vh;
+        right: 0;
+        width: 50vw;
+        height: 75vh;
+        background: rgb(237, 164, 247);
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .navbar_usuario a {
+        opacity: 0;
+    }
+
+    .navbar_usuario img,
+    .navbar_explorar {
+        display: none;
+    }
+
+    .mobile_menu {
+        display: block;
+        /* position: absolute; */
+        /* right: 0; */
+        margin-right: 10px;
+        z-index: 2;
+    }
+
+    .navbar_usuario.active {
+        transform: translateX(0);
+        margin-left: -200px;
+        z-index: 2;
+    }
+
+    .navbar_low {
+        height: 50px;
+        justify-content: space-between;
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .banner {
+        width: 320px;
+        height: 300px;
+    }
+
+    .container {
+        padding-top: 10vh;
+    }
+
+    .caixa {
+        width: 132px;
+        height: 142px;
+        /* justify-content: center; */
+        align-items: center;
+        font-size: .7em;
+        overflow: hidden;
+    }
+
+    .caixa p {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    .caixa img {
+        height: 100px;
+        width: 100px;
+        margin: 5px 0;
+    }
+
+    #aparecer {
+        width: 300px;
+        top: 35vh;
+        left: 15vw;
+    }
+
+    #results {
+        width: 80%;
+        top: 18vh;
+    }
+
+    #produto {
+        width: 80%;
+    }
+
+    #produto img {
+        width: 100%;
+    }
+
+    div:where(.swal2-container).swal2-center>.swal2-popup {
+        margin-left: -220px;
+        width: 55%;
+    }
+
+    .cadastro {
+        margin-left: 20px;
+        width: 250px;
+        padding: 20px;
+    }
+
+    .cadastro h1 {
+        margin-top: -40px;
+        font-size: 1.3em;
+    }
+
+    .cadastro input {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .cadastro img {
+        max-width: 100px;
+    }
+
+    .cadastro label {
+        font-size: 10px;
+    }
+    .cadastro button:hover{
+        padding: 20px;
+        width: 200px;
+    }
+}
+
+footer {
+    background-color: blueviolet;
+    margin-top: 10%;
+    height: 5vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #f170d5;
+    color: white;
+}

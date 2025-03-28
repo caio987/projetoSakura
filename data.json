@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Sushi",
+    "description": "Arroz temperado com vinagre e combinado com peixe cru, frutos do mar ou vegetais.",
+    "img": "img/comidas/sushi.jpg",
+    "preco": "5"
+  },
+  {
+    "id": 2,
+    "name": "Sashimi",
+    "description": "Fatias finas de peixe cru, como salmão, atum ou robalo.",
+    "img": "img/comidas/sashimi.jpg",
+    "preco": "6"
+  },
+  {
+    "id": 3,
+    "name": "Ramen",
+    "description": "Macarrão em caldo quente, geralmente à base de shoyu, missô ou tonkotsu.",
+    "img": "img/comidas/ramen.jpg",
+    "preco": "4"
+  },
+  {
+    "id": 4,
+    "name": "Tempurá",
+    "description": "Legumes ou frutos do mar empanados e fritos.",
+    "img": "img/comidas/tempura.jpg",
+    "preco": "3"
+  },
+  {
+    "id": 5,
+    "name": "Takoyaki",
+    "description": "Bolinhas de massa recheadas com polvo, cobertas com molho agridoce e flocos de peixe seco.",
+    "img": "img/comidas/takoyaki.jpg",
+    "preco": "4"
+  },
+  {
+    "id": 6,
+    "name": "Okonomiyaki",
+    "description": "Panqueca japonesa recheada com repolho, carne, frutos do mar e coberta com molho especial.",
+    "img": "img/comidas/okonomiyaki.jpg",
+    "preco": "5"
+  },
+  {
+    "id": 7,
+    "name": "Yakitori",
+    "description": "Espetinhos de frango grelhados com molho teriyaki.",
+    "img": "img/comidas/yakitori.jpg",
+    "preco": "3"
+  },
+  {
+    "id": 8,
+    "name": "Onigiri",
+    "description": "Bolinho de arroz recheado com salmão, atum ou umeboshi, envolto em alga nori.",
+    "img": "img/comidas/onigiri.jpeg",
+    "preco": "3"
+  },
+  {
+    "id": 9,
+    "name": "Gyoza",
+    "description": "Pasteizinhos recheados com carne de porco e vegetais, cozidos no vapor e grelhados.",
+    "img": "img/comidas/gyoza.jpg",
+    "preco": "4"
+  },
+  {
+    "id": 10,
+    "name": "Dorayaki",
+    "description": "Panquecas recheadas com anko (pasta doce de feijão azuki).",
+    "img": "img/comidas/dorayaki.jpg",
+    "preco": "2"
+  }
+] 

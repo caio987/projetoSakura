@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="navbar_up">
+                    <div class="link_social">
+                        <a href="">
+                            <img src="img/icons/github.png" alt="">
+                        </a>
+                    </div>
+                    <div class="link_social">
+                        <a href="">
+                            <img src="img/icons/youtube.png" alt="">
+                        </a>
+                    </div>
+                    <div class="link_social">
+                        <a href="">
+                            <img src="img/icons/instagram.png" alt="">
+                        </a>
+                    </div>
+                    <div class="link_social">
+                        <a href="">
+                            <img src="img/icons/facebook.png" alt="">
+                        </a>
+                    </div>
+                    <div class="link_social">
+                        <a href="">
+                            <img src="img/icons/zap.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar_low">
+                    <a id="logo" href="index.html"><img src="img/icons/logo.png" alt=""></a>
+                    <input type="text" id="searchBar" placeholder="Digite o nome do item...">
+                    <ul id="results"></ul>
+                    <div class="mobile_menu">
+                        <div class="linha1"></div>
+                        <div class="linha2"></div>
+                        <div class="linha3"></div>
+                    </div>
+                    <div class="navbar_usuario">
+                        <div class="icon_navbar">
+                            <img src="img/icons/coraçao-icon.png" alt="">
+                            <a href="#">Favoritos</a>
+                        </div>
+                        <div class="icon_navbar">
+                            <img src="img/icons/suporte-icon.png" alt="">
+                            <a href="#">Atendimentos</a>
+                        </div>
+                        <div class="icon_navbar">
+                            <img src="img/icons/usuario-icon.png" alt="">
+                            <div id="usuario"></div>
+                        </div>
+                        <div class="icon_navbar">
+                            <img src="img/icons/carrinho-icon.png" alt="">
+                            <a href="#">Carrinho</a>
+                        </div>
+                        <div class="icon_navbar">
+                            <img src="img/icons/icon-explorar.png" alt="">
+                            <a href="#">Explorar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <hr> -->
+                <!-- <div class="navbar_explorar">
+                    <a href="">Bebidas</a>
+                    <a href="">Alimentos</a>
+                </div> -->
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- <button onclick="favorito()">Favoritar</button> -->
+        <div class="container" style="text-align: center;">
+            <div id="produto">
+                <h3 id="nomeProduto"></h3>
+                <img src="" alt="" id="fotoProduto" />
+                <p id="descrisaoProduto"></p>
+                <span id="precoProduto"></span>
+                <span id="precoProdutoReal"></span>
+                <form action="" class="bloco">
+                    <button onclick="comprar()" type="button">Comprar</button>
+                    <br />
+
+                    <div id="aparecer" style="display: none;">
+                        <div class="confirmarCompra">
+                            <h3>Tem certeza?</h3>
+                            <label for="" id="rua"></label>
+                            <p>clique em Confirmar compra para confirmar</p>
+                            <span id="precoTotal"></span><br />
+
+                            <button onclick="confirmar()" type="button">Confirme sua compra</button>
+                            <button type="button" onclick="sair()">Cancelar</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer>
+        <p>Todos direitos reservados para Sakura</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
